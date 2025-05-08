@@ -12,10 +12,10 @@ class peach():
 class peach():
     def __init__(self):
         self.author = ""
-        self.title = "" 
+        self.title = ""        
         self.price = 0
         self.Books ={}
-        self.people         
+        self.people = ""       
     def plus(self):
         self.title = input("enter the name of the book you would like to plus:\n").upper
         self.author =input("enter the Author of the book you have just plused:\n").upper
