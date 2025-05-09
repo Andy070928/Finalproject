@@ -1,8 +1,10 @@
             
 class peach():
     def __init__(self):
-        self.name="Andy"
-        self.title="Moby Dick"
+        self.name="Lyman Frank Baum"
+        self.title="The Wizard of Oz" \
+        "" 
+
 
 
 
@@ -18,7 +20,7 @@ class peach():
         self.people = ""       
     def plus(self):
         self.title = input("enter the name of the book you would like to plus:\n").upper
-        self.author =input("enter the Author of the book you have just plused:\n").upper
+        self.author =input("enter the Autho   r of the book you have just plused:\n").upper
         self.price =float(input("Enter the listing price of the book:\n"))
 
         self.Books [self.title] ={'Author':self.author,'Price':self.price}
