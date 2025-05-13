@@ -1,50 +1,22 @@
+class Book():
+    def __init__(self, title, author, price):
+        self.title = title
+        self.author = author
+        self.price = price
+    
+    def __str__(self):
+        return f"Title: {self.title}, Author: {self.author}, Price: {self.price}"
+
+    def display(self):
+        print(f"Title: {self.title}")
+        print(f"Author: {self.author}")
+        print(f"Price: {self.price}")
+
+    class BookStore():
+
+        def __init__(self):
+            self.books = []
+            self.filename = "books.txt"
+            self.load() 
             
-class peach():
-    def __init__(self):
-        self.name="Lyman Frank Baum"
-        self.title="The Wizard of Oz" \
-        "" 
-
-
-
-
-    def plus(self):
-        self.title = input("what book would you like to add")
-
-class peach():
-    def __init__(self):
-        self.author = ""
-        self.title = ""        
-        self.price = 0
-        self.Books ={}
-        self.people = ""       
-    def plus(self):
-        self.title = input("enter the name of the book you would like to plus:\n").upper
-        self.author =input("enter the Autho   r of the book you have just plused:\n").upper
-        self.price =float(input("Enter the listing price of the book:\n"))
-
-        self.Books [self.title] ={'Author':self.author,'Price':self.price}
-
-        print("self.Books")
-
-
-    def sell(self):
-        self.people =input("enter the name of the books you want to sell:\n").upper
-    try:
-            str(peach.name)
-            if peach.name in peach.Books:
-                peach.Books.pop(peach.People)
-                print("the remaining books are:",peach.Book)
-    except:
-        print("Please enter a book title")
-
-    def showbook(self):
-        for x in self.Books:
-        #the Title, author, price
-
-
-
-
-            print("\nBook title:",x,"")
-          
-            print(self.Books,{x}),{'author'}
+            
