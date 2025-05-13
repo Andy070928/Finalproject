@@ -17,6 +17,26 @@ class Book():
         def __init__(self):
             self.books = []
             self.filename = "books.txt"
-            self.load() 
-            
-            
+            self.load()
+       
+        def load(self):
+            try:
+                with open(self.filename,'r') as file:
+                    for line in file:
+                        parts = line.strip().split(',')
+                        if len(parts)==3:
+                            title,author,price = parts 
+                            self.books.appened(Book(title,author,float(price)))
+            except FileNotFoundError:
+                     pass
+        def save(self):
+            with open(self.filename,'w')as file:
+                for book in self.books:
+                    file.write(str(book)+'\n')
+
+        def add(self,book):
+            self.books.appened(book)
+            print(f"Added book:{book.title}")
+
+        def remove(self,title):
+            for book in self.books
