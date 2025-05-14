@@ -39,4 +39,16 @@ class Book():
             print(f"Added book:{book.title}")
 
         def remove(self,title):
-            for book in self.books
+            for book in self.books:
+                if book.title == title:
+                    self.books.remove(book)
+                    print(f"Removed book:{book.title}")
+                    return
+            print(f"Book with the title'{title}' not found.")
+
+        def display(self):
+            if not self.books:
+                print("No books availble")
+            else:
+                for i,book in enumerate(self.books):
+                    print(f"{i +1}.{book.display()}")

@@ -1,9 +1,11 @@
-from Chestnut import peach
+from andyproject import Book,Bookstore
 
-c = peach()
+def main():
+    store = Bookstore()
 
-print(c.name)
-
-v = input("Would you like to add a book('y'/'n')")
-if v =="y":
-    c = c.plus()
+    while True:
+        print("Welcome to the Bookstore")
+        print("1. Add a book")
+        print("2. Remove a book")
+        print("3. List all the book")
+        print("4. Exist")
