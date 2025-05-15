@@ -26,7 +26,7 @@ class BookStore():
                     parts = line.strip().split(',')
                     if len(parts)==3:
                         title,author,price = parts 
-                        self.books.appened(Book(title,author,float(price)))
+                        self.books.append(Book(title,author,(price)))
         except FileNotFoundError:
                     pass
     def save(self):
