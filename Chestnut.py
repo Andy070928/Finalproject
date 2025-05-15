@@ -12,43 +12,43 @@ class Book():
         print(f"Author: {self.author}")
         print(f"Price: {self.price}")
 
-    class BookStore():
+class BookStore():
 
-        def __init__(self):
-            self.books = []
-            self.filename = "books.txt"
-            self.load()
-       
-        def load(self):
-            try:
-                with open(self.filename,'r') as file:
-                    for line in file:
-                        parts = line.strip().split(',')
-                        if len(parts)==3:
-                            title,author,price = parts 
-                            self.books.appened(Book(title,author,float(price)))
-            except FileNotFoundError:
-                     pass
-        def save(self):
-            with open(self.filename,'w')as file:
-                for book in self.books:
-                    file.write(str(book)+'\n')
-
-        def add(self,book):
-            self.books.appened(book)
-            print(f"Added book:{book.title}")
-
-        def remove(self,title):
+    def __init__(self):
+        self.books = []
+        self.filename = "books.txt"
+        self.load()
+    
+    def load(self):
+        try:
+            with open(self.filename,'r') as file:
+                for line in file:
+                    parts = line.strip().split(',')
+                    if len(parts)==3:
+                        title,author,price = parts 
+                        self.books.appened(Book(title,author,float(price)))
+        except FileNotFoundError:
+                    pass
+    def save(self):
+        with open(self.filename,'w')as file:
             for book in self.books:
-                if book.title == title:
-                    self.books.remove(book)
-                    print(f"Removed book:{book.title}")
-                    return
-            print(f"Book with the title'{title}' not found.")
+                file.write(str(book)+'\n')
 
-        def display(self):
-            if not self.books:
-                print("No books availble")
-            else:
-                for i,book in enumerate(self.books):
-                    print(f"{i +1}.{book.display()}")
+    def add(self,book):
+        self.books.append(book)
+        print(f"Added book:{book.title}")
+
+    def remove(self,title):
+        for book in self.books:
+            if book.title == title:
+                self.books.remove(book)
+                print(f"Removed book:{book.title}")
+                return
+        print(f"Book with the title'{title}' not found.")
+
+    def display(self):
+        if not self.books:
+            print("No books availble")
+        else:
+            for i,book in enumerate(self.books):
+                print(f"{i +1}.{book.display()}")
